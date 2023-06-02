@@ -1,5 +1,9 @@
 package com.example.love_shayari_app;
 
+import android.os.Environment;
+
+import java.io.File;
+
 public class Config {
     public static int [] img={R.drawable.jivan_shayari,R.drawable.mohobbat_shayari,R.drawable.yaade_shayari,R.drawable.anya_shayari,
             R.drawable.politics,R.drawable.love,R.drawable.sad,R.drawable.bearbar,R.drawable.bewfa};
@@ -176,8 +180,8 @@ public class Config {
             " 🌱 🌿 ☘️ 🍀 🎍 🪴 🎋 🍃 🍂 🍁 🍄 🐚 🪨",
             "🌾 💐 🌷 🪷 🌹 🥀 🌺 🌸 🌼 🌻 🌞, 🌝"};
     public static int gradArr[]={R.drawable.bg_gradient1,R.drawable.bg_gradient2,R.drawable.bg_gradient3,R.drawable.bg_gradient4,R.drawable.bg_gradient5};
-    public static int colorArr[]={R.drawable.bg_color1,R.drawable.bg_color2,R.drawable.bg_color3,R.drawable.bg_color4,
-            R.drawable.bg_color5,R.drawable.bg_color6,R.drawable.bg_color7,R.drawable.bg_color8,R.drawable.bg_color9,R.drawable.bg_color10,};
+    public static int colorArr[]={R.color.bg_color1,R.color.bg_color2,R.color.bg_color3,R.color.bg_color4,
+            R.color.bg_color5,R.color.bg_color6,R.color.bg_color7,R.color.bg_color8,R.color.bg_color9,R.color.bg_color10,};
 
    public static String font[]={
            "ALGER.TTF",
@@ -188,4 +192,5 @@ public class Config {
            "calibrib.ttf",
            "calibril.ttf" ,
            "BRUSHSCI.TTF"};
+    public static File file = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
 }
