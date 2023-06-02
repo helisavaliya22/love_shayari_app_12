@@ -176,5 +176,16 @@ public class Config {
             " 🌱 🌿 ☘️ 🍀 🎍 🪴 🎋 🍃 🍂 🍁 🍄 🐚 🪨",
             "🌾 💐 🌷 🪷 🌹 🥀 🌺 🌸 🌼 🌻 🌞, 🌝"};
     public static int gradArr[]={R.drawable.bg_gradient1,R.drawable.bg_gradient2,R.drawable.bg_gradient3,R.drawable.bg_gradient4,R.drawable.bg_gradient5};
+    public static int colorArr[]={R.drawable.bg_color1,R.drawable.bg_color2,R.drawable.bg_color3,R.drawable.bg_color4,
+            R.drawable.bg_color5,R.drawable.bg_color6,R.drawable.bg_color7,R.drawable.bg_color8,R.drawable.bg_color9,R.drawable.bg_color10,};
 
+   public static String font[]={
+           "ALGER.TTF",
+           "BOD_R.TTF",
+           "BOD_B.TTF" ,
+           "BOD_BLAR.TTF" ,
+           "BOD_CI.TTF",
+           "calibrib.ttf",
+           "calibril.ttf" ,
+           "BRUSHSCI.TTF"};
 }

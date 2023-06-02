@@ -89,18 +89,19 @@ public class Details_activity extends AppCompatActivity {
                 {
                     shayaridisp.setText(Config.emoji[position]+"\n"+shayari[position]+"\n"+Config.emoji[position]);
                     position--;
-                    shayarinumber.setText((position+1)+"/"+shayari.length);
+                    shayarinumber.setText((position+1)+"/"+(shayari.length-1));
                 }
             }
         });
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(position<shayari.length)
+                if(position<shayari.length-1)
                 {
                     shayaridisp.setText(Config.emoji[position]+"\n"+shayari[position]+"\n"+Config.emoji[position]);
                     position++;
-                    shayarinumber.setText((position+1)+"/"+shayari.length);
+                    shayarinumber.setText((position+1)+"/"+(shayari.length-1));
+
                 }
             }
         });
