@@ -1,10 +1,12 @@
 package com.example.love_shayari_app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.ClipboardManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -13,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.love_shayari_app.Adapter.Gradient_Adapter;
+import com.example.love_shayari_app.Adapter.ShayriPagerAdapter;
 import com.example.love_shayari_app.Config;
 import com.example.love_shayari_app.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -23,6 +26,7 @@ public class Details_activity extends AppCompatActivity {
     TextView shayaridisp,shayarinumber;
     ImageView expand,reload,copy,previous,pencil,next,share;
     int position;
+    ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,7 +132,27 @@ public class Details_activity extends AppCompatActivity {
               startActivity(Intent.createChooser(intentt, "Share Via"));
           }
       });
+        ShayriPagerAdapter pagerAdapter=new ShayriPagerAdapter(Details_activity.this,shayari,shayaridisp);
+        viewPager=findViewById(R.id.viewPager);
+        viewPager.setAdapter(pagerAdapter);
+        viewPager.setCurrentItem(position);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                shayaridisp.setText(Config.emoji[position]+"\n"+shayari[position]+"\n"+Config.emoji[position]);
+                Log.d("TTT", "PageSelected: "+position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                Log.d("TTT", "PageScrolled: "+position);
+            }
+        });
 
     }
 }

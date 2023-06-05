@@ -210,7 +210,8 @@ public class Shayari_Edit_Activity extends AppCompatActivity {
          });
          share.setOnClickListener(new View.OnClickListener() {
              @Override
-             public void onClick(View v) {
+             public void onClick(View v)
+             {
                  Bitmap icon = getBitmapFromView(shayariedit);
                  //Intent share = new Intent(Intent.ACTION_SEND);
                  Intent share =new Intent(Intent.ACTION_SEND);
